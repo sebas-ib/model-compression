@@ -1,0 +1,23 @@
+# Ignore virtual environment
+venv/
+*.pyc
+__pycache__/
+
+data/
+!data/breast-cancer-wisconsin.csv
+!data/metadata.json
+
+# Ignore models
+models/
+!models/.gitkeep
+
+notebooks/.ipynb_checkpoints/
+
+.idea/
+
+*.log
+.DS_Store
+Thumbs.db
+
+*.swp
+*.swo
