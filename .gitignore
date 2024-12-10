@@ -7,8 +7,7 @@ __pycache__/
 #!data/breast-cancer-wisconsin.csv
 #!data/metadata.json
 
-# Ignore models
-models/
+models/*
 !models/.gitkeep
 
 notebooks/.ipynb_checkpoints/
