@@ -1,0 +1,39 @@
+{
+    "primary_key": "ID",
+    "columns": {
+        "ID": {
+            "sdtype": "id",
+            "regex_format": "[0-9]{7}"
+        },
+        "CT": {
+            "sdtype": "numerical"
+        },
+        "UCSi": {
+            "sdtype": "numerical"
+        },
+        "UCSh": {
+            "sdtype": "numerical"
+        },
+        "Madh": {
+            "sdtype": "numerical"
+        },
+        "SECS": {
+            "sdtype": "numerical"
+        },
+        "BN": {
+            "sdtype": "numerical"
+        },
+        "BC": {
+            "sdtype": "numerical"
+        },
+        "NN": {
+            "sdtype": "numerical"
+        },
+        "Mi": {
+            "sdtype": "numerical"
+        },
+        "Class": {
+            "sdtype": "categorical"
+        }
+    }
+}
