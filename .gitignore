@@ -1,11 +1,10 @@
-# Ignore virtual environment
 venv/
 *.pyc
 __pycache__/
 
 #data/
 #!data/breast-cancer-wisconsin.csv
-#!data/metadata.json
+#!data/cancer_metadata.json
 
 models/*
 !models/.gitkeep
