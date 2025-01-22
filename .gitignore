@@ -6,6 +6,8 @@ __pycache__/
 #!data/breast-cancer-wisconsin.csv
 #!data/cancer_metadata.json
 
+save/
+
 models/*
 !models/.gitkeep
 
