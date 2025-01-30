@@ -51,6 +51,7 @@ def prune_attention_heads(model, heads_to_prune):
                 if 'attn' in name:
                     prune_heads(block.attn, heads_to_prune[block_index][1])
 
+                # Messing around with pruning mlp layers as well
                 # elif 'mlp' in name:
                 #     # get the dimensions of the current tensor
                 #     fc_weight_shape = block.mlp.c_fc.weight.shape
