@@ -79,11 +79,15 @@ def prune_attention_heads(model, heads_to_prune):
 
 
 def prune_model(model, prune_ratio, prune_heads=True, prune_fc=True):
+    # Iterate through modules in the model and check if it is a Conv1D layer
     for name, module in model.named_modules():
+
+        # If "attn" is in the name of the layer it is an attention layer
         if prune_heads and isinstance(module, Conv1D) and "attn" in name:
-            prune.ln_structured(module, name='weight', amount=prune_ratio, dim=0, n=float('-inf'))
+            prune.ln_structured(module, name='weight', amount=prune_ratio, dim=0, n=2)
             prune.remove(module, name='weight')
 
+        # If "mlp" is in the name of the layer it is an MLP layer
         if prune_fc and isinstance(module, Conv1D) and "mlp" in name:
-            prune.ln_structured(module, name='weight', amount=prune_ratio, dim=0, n=float('-inf'))
+            prune.ln_structured(module, name='weight', amount=prune_ratio, dim=0, n=2)
             prune.remove(module, name='weight')
